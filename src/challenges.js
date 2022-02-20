@@ -33,16 +33,20 @@ console.log(splitSentence('foguete'));
 
 function concatName(listaPalavras) {
   return listaPalavras[(listaPalavras.length - 1)] + ', ' + listaPalavras[0];
-}
+} // Não passou pelo EsLint ? Rever questão.
 
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 console.log(concatName(['foguete', 'não', 'tem', 'ré']));
 console.log(concatName(['captain', 'my', 'captain']));
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return (wins * 3 + ties);
 }
+
+console.log(footballPoints(14, 8));
+console.log(footballPoints(1, 2));
+console.log(footballPoints(0, 0));
 
 // Desafio 6
 function highestCount() {
