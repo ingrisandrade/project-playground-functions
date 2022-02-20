@@ -49,9 +49,26 @@ console.log(footballPoints(1, 2));
 console.log(footballPoints(0, 0));
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+
+function highestCount(arrayNumeros) { // Não passou pelo EsLint ? Rever questão.
+  let maiorNumero = arrayNumeros[0];
+  let contador = 0;
+  for (let index = 1; index < arrayNumeros.length; index += 1) {
+    if (arrayNumeros[index] > maiorNumero) {
+      maiorNumero = arrayNumeros[index];
+    }
+  }
+  for (let cont = 0; cont < arrayNumeros.length; cont += 1) {
+    if (maiorNumero === arrayNumeros[cont]) {
+      contador += 1;
+    }
+  }
+  return contador;
 }
+
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
+console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
+console.log(highestCount([0, 0, 0]));
 
 // Desafio 7
 function catAndMouse() {
