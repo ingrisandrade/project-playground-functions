@@ -1,3 +1,4 @@
+/* eslint-disable max-lines-per-function */
 // Desafio 1
 function compareTrue(valor1, valor2) {
   if (valor1 === true && valor2 === true) {
@@ -91,9 +92,31 @@ console.log(catAndMouse(0, 6, 12));
 console.log(catAndMouse(0, 2, 2));
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(array) {
+  let divisivelPor3;
+  let divisivelPor5;
+  let resultado = [];
 
+  for (let index = 0; index < array.length; index += 1) {
+    divisivelPor3 = array[index] % 3;
+    divisivelPor5 = array[index] % 5;
+
+    if (divisivelPor3 !== 0 && divisivelPor5 !== 0) {
+      resultado.push('bug!');
+    } else if (divisivelPor3 === 0 && divisivelPor5 === 0) {
+      resultado.push('fizzBuzz');
+    }else if (divisivelPor3 === 0) {
+      resultado.push('fizz');
+    }else {
+      resultado.push('buzz');
+    }
+  }
+  return resultado;
 }
+
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
+console.log(fizzBuzz([7, 9]));
+console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
 function encode() {
