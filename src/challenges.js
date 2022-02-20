@@ -105,9 +105,9 @@ function fizzBuzz(array) {
       resultado.push('bug!');
     } else if (divisivelPor3 === 0 && divisivelPor5 === 0) {
       resultado.push('fizzBuzz');
-    }else if (divisivelPor3 === 0) {
+    } else if (divisivelPor3 === 0) {
       resultado.push('fizz');
-    }else {
+    } else {
       resultado.push('buzz');
     }
   }
@@ -119,12 +119,27 @@ console.log(fizzBuzz([7, 9]));
 console.log(fizzBuzz([9, 25]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(texto) {
+  texto = texto.replace(/a/g, 1);
+  texto = texto.replace(/e/g, 2);
+  texto = texto.replace(/i/g, 3);
+  texto = texto.replace(/o/g, 4);
+  texto = texto.replace(/u/g, 5);
+  return texto;
 }
-function decode() {
-  // seu código aqui
+
+console.log(encode('hi there'));
+
+function decode(texto) {
+  texto = texto.replace(/1/g, 'a');
+  texto = texto.replace(/2/g, 'e');
+  texto = texto.replace(/3/g, 'i');
+  texto = texto.replace(/4/g, 'o');
+  texto = texto.replace(/5/g, 'u');
+  return texto;
 }
+
+console.log(decode('h3 th2r2!'));
 
 // Desafio 10
 function techList() {
