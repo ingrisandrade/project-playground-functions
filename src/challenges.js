@@ -81,18 +81,18 @@ function catAndMouse(mouse, cat1, cat2) {
   } else if (distanciaCat1 > distanciaCat2) {
     resultado = 'cat2';
   } else if (distanciaCat1 === distanciaCat2) {
-    resultado = 'Os gatos trombam e o rato foge';
+    resultado = 'os gatos trombam e o rato foge';
   }
   return resultado;
 }
 
 console.log(catAndMouse(0, 3, 2));
 console.log(catAndMouse(0, 6, 12));
-console.log(catAndMouse(0, 0, 0));
+console.log(catAndMouse(0, 2, 2));
 
 // Desafio 8
 function fizzBuzz() {
-  // seu código aqui
+
 }
 
 // Desafio 9
