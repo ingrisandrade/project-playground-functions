@@ -1,5 +1,5 @@
 // Desafio 11
-function generatePhoneNumber(numeroTelefone) {
+function generatePhoneNumber(numeroTelefone) { // Não passou no ESLint
   let telefone = '(' + numeroTelefone[0] + numeroTelefone[1] + ')' +
   ' ' + numeroTelefone[2] + numeroTelefone[3] + numeroTelefone[4] + numeroTelefone[5] + numeroTelefone[6] + '-' +
   numeroTelefone[7] + numeroTelefone[8] + numeroTelefone[9] + numeroTelefone[10];
@@ -34,9 +34,16 @@ console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 1, 1, 0, 1]));
 console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  if (lineA > lineB + lineC || lineB > lineA + lineC || lineC > lineA + lineB) {
+    return false;
+  } else if (lineA < lineB - lineC || lineB < lineA - lineC || lineC < lineA - lineB) {
+    return false;
+  } else {
+    return true;
+  }
 }
+
 
 // Desafio 13
 function hydrate() {
